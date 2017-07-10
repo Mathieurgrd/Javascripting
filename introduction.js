@@ -24,7 +24,8 @@ function myFunction() {
         }
       }
     } else {
-        txt = "Vous semblez tiraillé (lol) ! ";
+        txt = "Ceci est ma cave a patate vide ! :( ";
+        alert("Vous semblez tiraillé (lol) !")
     }
     document.getElementById("demo").innerHTML = txt;
 }
