@@ -1,20 +1,34 @@
-  
- 
- likePotatoes = new confirm();
- likePotatoes = confirm("Hey mon ami tu aime les patates ?");
+<!DOCTYPE html>
+<html>
+<body>
 
- alert(likePotatoes);
-  
-  if (likePotatoes) {
-    
-    Potatoe = "#";
-    
-    i = 1;
-    
-    
-    for(i = 1; i < 8; i ++){
-      console.log(i * Potatoe)
+<p>Click the button to display a confirm box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+   
+    var patate = "#"
+    var r = confirm("Hey mon ami tu aime les patates?");
+    if (r == true) {
+      for(i = 0; i < 8; i ++){
+        var txt;
+        if(txt == null){ 
+          txt = patate.repeat(i) + "<br>";
+          
+        }else{
+        txt = txt + patate.repeat(i) + "<br>";
+        }
+      }
+    } else {
+        txt = "Vous semblez tiraillé (lol) ! ";
     }
-  } else {
-    alert("Je vous sens comme tiraillé ! ")
-  }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
